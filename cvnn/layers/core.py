@@ -274,7 +274,7 @@ class ComplexDense(Dense, ComplexLayer):
     def call(self, inputs: t_input):
         # tf.print(f"inputs at ComplexDense are {inputs.dtype}")
         if inputs.dtype != self.my_dtype:
-            tf.print(f"WARNING: {self.name} - Expected input to be {self.my_dtype}, but received {inputs.dtype}.")
+            # tf.print(f"WARNING: {self.name} - Expected input to be {self.my_dtype}, but received {inputs.dtype}.")
             if self.my_dtype.is_complex and inputs.dtype.is_floating:
                 tf.print("\tThis is normally fixed using ComplexInput() "
                          "at the start (tf casts input automatically to real).")
